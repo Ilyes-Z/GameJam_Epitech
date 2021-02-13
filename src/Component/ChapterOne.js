@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ChapterOne = () => {
 
@@ -6,14 +7,11 @@ const ChapterOne = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(Token);
-    if (Token === "Passe") {
-      <changePage/>
+    if (Token == "Passe") {
+      console.log('duuuuude you got it!');
+      window.location.replace('/');
     }
     else return;
-  };
-
-  const changePage = () => {
-    <h3>GOOD JOB</h3>
   };
 
   return (
