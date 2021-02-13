@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './ChapterOne.css';
 const ChapterOne = () => {
 
   const [Token, setToken] = useState('');
@@ -8,13 +8,13 @@ const ChapterOne = () => {
     console.log(Token);
     if (Token == "Passe") {
       console.log('duuuuude you got it!');
-      window.location.replace('/');
+      window.location.replace('/#/chapterTwo');
     }
     else return;
   };
 
   return (
-    <div>
+    <div className='title'>
       <h1>First Chapter : The Past</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -27,11 +27,15 @@ const ChapterOne = () => {
         />
         <button>search</button>
       </form>
-      <div>
-        <p>hello left</p>
-      </div>
-      <div>
-        <p>hello right</p>
+      <div className='wrapper'>
+        <div className='item1'>
+          <p>
+            hello left
+          </p>
+        </div>
+        <div className='item2'>
+          <p>hello right</p>
+        </div>
       </div>
     </div>
   );
