@@ -23,7 +23,7 @@ function Header(props) {
       <Toolbar>
         <Box display='flex' flexGrow={1}>
           <Typography variant="h5">
-            <Link to='/' className={classes.title}>JAM</Link>
+            <Link to='/' className={classes.title}>EPITECH JAM</Link>
           </Typography>
         </Box>
       </Toolbar>

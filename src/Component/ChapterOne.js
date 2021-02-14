@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+import ArticlesDialog from './Dialog/Articles';
+import ArticlesBasic from './Dialog/Basic';
+import GroupArticle from './Dialog/GroupArticle';
 import './ChapterOne.css';
+
 const ChapterOne = () => {
 
   const [Token, setToken] = useState('');
@@ -29,14 +33,18 @@ const ChapterOne = () => {
       </form>
       <div className='wrapper'>
         <div className='item1'>
-          <p>
-            hello left
-          </p>
+          <h3>Turing</h3>
+          <ArticlesDialog />
         </div>
         <div className='item2'>
-          <p>hello right</p>
+          <h3>Your First Step</h3>
+          <ArticlesBasic />
         </div>
       </div>
+        <div>
+          <h3>Your first group</h3>
+          <GroupArticle />
+        </div>
     </div>
   );
 }

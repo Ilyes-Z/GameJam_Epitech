@@ -50,6 +50,7 @@ const ChapterThree = () => {
       </div>
       <div>
         <p>slt Future </p>
+        <p>“On n'est toujours que trop ce que les hommes veulent que l'on soit." Rousseau</p>
       </div>
     </div>
   );
