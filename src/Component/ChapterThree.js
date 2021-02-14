@@ -9,10 +9,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     textDecoration: 'none',
     color: '#ffffff',
+    backgroundColor: '#b5b5b5'
   },
   background: {
     backgroundColor: '#000000'
-  }
+  },
 }));
 
 const ChapterThree = () => {
@@ -49,7 +50,7 @@ const ChapterThree = () => {
               placeholder=' you already know !'
               onChange={event => {setPresent(event.target.value)}}
               />
-            <Button className={classes.background}  variant="contained"
+            <Button type='submit' className={classes.background}  variant="contained"
           color="primary">give</Button>
           </form>
         </div>

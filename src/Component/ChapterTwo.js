@@ -48,8 +48,8 @@ const ChapterTwo = () => {
               placeholder='what said the past ?'
               onChange={event => {setPast(event.target.value)}}
               />
-            <Button className={classes.background}  variant="contained"
-          color="primary" onSubmit={handlePastSubmit}>give</Button>
+            <Button type='submit' className={classes.background}  variant="contained"
+          color="primary">give</Button>
           </form>
         </div>
         <div className='item2'>
@@ -59,8 +59,8 @@ const ChapterTwo = () => {
               placeholder='You know the way'
               onChange={event => {setPresent(event.target.value)}}
             />
-            <Button className={classes.background}  variant="contained"
-          color="primary" onSubmit={handlePresentSubmit}>search</Button>
+            <Button type='submit' className={classes.background}  variant="contained"
+          color="primary">search</Button>
           </form>
         </div>
       </div>

@@ -4,9 +4,15 @@ import { Button, makeStyles } from '@material-ui/core';
 import ArticlesDialog from './Dialog/Articles';
 import ArticlesBasic from './Dialog/Basic';
 import GroupArticle from './Dialog/GroupArticle';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
 import './ChapterOne.css';
 
 const useStyles = makeStyles((theme) => ({
+  root:{
+    minWidth: 270
+  },
   title: {
     flexGrow: 1,
     fontWeight: 'bold',
@@ -32,8 +38,10 @@ const ChapterOne = () => {
   };
 
   return (
+    <div className='all'>
     <div className='title'>
       <h1>First Chapter : The Past</h1>
+      <form onSubmit={handleSubmit}>
         <TextField
           value={Token}
           type='text'
@@ -42,22 +50,36 @@ const ChapterOne = () => {
             setToken(event.target.value);
           }}
         />
-        <Button className={classes.background}  variant="contained"
-          color="primary" onSubmit={handleSubmit}>FIND</Button>
+        <Button type='submit' className={classes.background}  variant="contained"
+          color="primary">FIND</Button>
+      </form>
       <div className='wrapper'>
         <div className='item1'>
-          <h3>Turing</h3>
-          <ArticlesDialog />
+          <Card className={classes.root}>
+            <CardContent>
+              <h3>Turing</h3>
+              <ArticlesDialog />
+            </CardContent>
+          </Card>
         </div>
         <div className='item2'>
-          <h3>Your First Step</h3>
-          <ArticlesBasic />
+          <Card className={classes.root}>
+            <CardContent>
+              <h3>Your First Step</h3>
+              <ArticlesBasic />
+            </CardContent>
+          </Card>
         </div>
       </div>
         <div>
-          <h3>Your first group</h3>
-          <GroupArticle />
+          <Card className={classes.root}>
+            <CardContent>
+              <h3>Your first group</h3>
+              <GroupArticle />
+            </CardContent>
+          </Card>
         </div>
+    </div>
     </div>
   );
 }
