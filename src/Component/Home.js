@@ -13,7 +13,7 @@ const Home = () => {
   const classes = useStyles();
   return (
     <div className='title'>
-      <h1> </h1>
+      <h1>Past Present Future</h1>
       <div>
         <Link to='/chapterOne' className={classes.link}><h3>Chapter One: The Past</h3></Link>
         <p>Avoir le courage de replonger dans nos souvenirs</p>

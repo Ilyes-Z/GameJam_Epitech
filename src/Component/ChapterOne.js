@@ -39,7 +39,7 @@ const ChapterOne = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(Token);
-    if (Token == "Passe") {
+    if (Token == "Begin") {
       console.log('duuuuude you got it!');
       window.location.replace('/#/chapterTwo');
     }

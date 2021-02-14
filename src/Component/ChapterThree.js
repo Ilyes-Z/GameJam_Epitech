@@ -46,9 +46,9 @@ const ChapterThree = () => {
   const handleFutureSubmit = (e) => {
     e.preventDefault();
     console.log(future);
-    if (future == "Evolve" && present == "Present") {
+    if (future == "Evolve" && present == "Hope") {
       console.log('ok done');
-      //window.location.replace('/#/chapterThree');
+      window.location.replace('/#/final');
     }
   };
 
@@ -74,14 +74,13 @@ const ChapterThree = () => {
               placeholder='What you want'
               onChange={event => {setFuture(event.target.value)}}
             />
-            <Button className={classes.background}  variant="contained"
+            <Button type='submit' className={classes.background}  variant="contained"
           color="primary">search</Button>
           </form>
         </div>
       </div>
       <div>
-        <p>slt Future </p>
-        <Button onClick={readOut}>Talk To Me</Button>
+        <Button className={classes.background} color="primary" onClick={readOut}>Talk To Me</Button>
         <p>“On n'est toujours que trop ce que les hommes veulent que l'on soit." Rousseau</p>
       </div>
     </div>

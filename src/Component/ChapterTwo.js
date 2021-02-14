@@ -32,7 +32,7 @@ const ChapterTwo = () => {
   const handlePresentSubmit = (e) => {
     e.preventDefault();
     console.log(present);
-    if (present == "Present" && past == "Passe") {
+    if (present == "Hope" && past == "Begin") {
       console.log('ok done');
       window.location.replace('/#/chapterThree');
     }
