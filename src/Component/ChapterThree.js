@@ -1,7 +1,22 @@
 import React, { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
+import { Button, makeStyles } from '@material-ui/core';
 import './ChapterThree.css';
 
+const useStyles = makeStyles((theme) => ({
+  title: {
+    flexGrow: 1,
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    color: '#ffffff',
+  },
+  background: {
+    backgroundColor: '#000000'
+  }
+}));
+
 const ChapterThree = () => {
+  const classes = useStyles();
   const [isValid] = useState(false);
   const [present, setPresent] = useState('');
   const [future, setFuture] = useState('');
@@ -29,22 +44,24 @@ const ChapterThree = () => {
       <div className='wrapper'>
         <div className='item1'>
           <form onSubmit={handlePresentSubmit}>
-            <input
+            <TextField
               value={present}
               placeholder=' you already know !'
               onChange={event => {setPresent(event.target.value)}}
               />
-            <button>give</button>
+            <Button className={classes.background}  variant="contained"
+          color="primary">give</Button>
           </form>
         </div>
         <div className='item2'>
           <form onSubmit={handleFutureSubmit}>
-            <input
+            <TextField
               value={future}
               placeholder='You know what you want'
               onChange={event => {setFuture(event.target.value)}}
             />
-            <button>search</button>
+            <Button className={classes.background}  variant="contained"
+          color="primary">search</Button>
           </form>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Video from './apeTogether.mp4';
 import { Button, makeStyles } from '@material-ui/core';
+import Video from './apeTogether.mp4';
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -41,7 +41,7 @@ function GroupArticle(props) {
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Your first team Work</DialogTitle>
-        <video controls autostart autoPlay src={Video} type="video/mp4" />
+        <video controls autoPlay src={Video} type="video/mp4" />
       </Dialog>
     </div>
   );

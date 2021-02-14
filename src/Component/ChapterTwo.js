@@ -1,8 +1,22 @@
 import React, { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
+import { Button, makeStyles } from '@material-ui/core';
 import './ChapterTwo.css';
 
+const useStyles = makeStyles((theme) => ({
+  title: {
+    flexGrow: 1,
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    color: '#ffffff',
+  },
+  background: {
+    backgroundColor: '#000000'
+  }
+}));
+
 const ChapterTwo = () => {
-  const [isValid] = useState(false);
+  const classes = useStyles();
   const [past, setPast] = useState('');
   const [present, setPresent] = useState('');
 
@@ -10,7 +24,7 @@ const ChapterTwo = () => {
     e.preventDefault();
     console.log(past);
     if (past == "Passe") {
-      console.log(isValid);
+      console.log("let's go");
     }
   };
 
@@ -29,22 +43,24 @@ const ChapterTwo = () => {
       <div className='wrapper'>
         <div className='item1'>
           <form onSubmit={handlePastSubmit}>
-            <input
+            <TextField
               value={past}
               placeholder='what said the past ?'
               onChange={event => {setPast(event.target.value)}}
               />
-            <button>give</button>
+            <Button className={classes.background}  variant="contained"
+          color="primary" onSubmit={handlePastSubmit}>give</Button>
           </form>
         </div>
         <div className='item2'>
           <form onSubmit={handlePresentSubmit}>
-            <input
+            <TextField
               value={present}
               placeholder='You know the way'
               onChange={event => {setPresent(event.target.value)}}
             />
-            <button>search</button>
+            <Button className={classes.background}  variant="contained"
+          color="primary" onSubmit={handlePresentSubmit}>search</Button>
           </form>
         </div>
       </div>

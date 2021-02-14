@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
+import { Button, makeStyles } from '@material-ui/core';
 import ArticlesDialog from './Dialog/Articles';
 import ArticlesBasic from './Dialog/Basic';
 import GroupArticle from './Dialog/GroupArticle';
 import './ChapterOne.css';
 
-const ChapterOne = () => {
+const useStyles = makeStyles((theme) => ({
+  title: {
+    flexGrow: 1,
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    color: '#ffffff',
+  },
+  background: {
+    backgroundColor: '#000000'
+  }
+}));
 
+const ChapterOne = () => {
+  const classes = useStyles();
   const [Token, setToken] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,8 +34,7 @@ const ChapterOne = () => {
   return (
     <div className='title'>
       <h1>First Chapter : The Past</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+        <TextField
           value={Token}
           type='text'
           placeholder='Find the way'
@@ -29,8 +42,8 @@ const ChapterOne = () => {
             setToken(event.target.value);
           }}
         />
-        <button>search</button>
-      </form>
+        <Button className={classes.background}  variant="contained"
+          color="primary" onSubmit={handleSubmit}>FIND</Button>
       <div className='wrapper'>
         <div className='item1'>
           <h3>Turing</h3>
