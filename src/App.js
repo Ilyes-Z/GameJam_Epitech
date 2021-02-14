@@ -3,6 +3,7 @@ import ChapterOne from './Component/ChapterOne';
 import Home from './Component/Home';
 import Header from './Component/Header';
 import ChapterTwo from './Component/ChapterTwo';
+import ChapterThree from './Component/ChapterThree';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route exact path='/' component={Home}></Route>
           <Route exact path='/chapterOne' component={ChapterOne}></Route>
           <Route exact path='/chapterTwo' component={ChapterTwo}></Route>
-          <Route exact path='/chapterThree'></Route>
+          <Route exact path='/chapterThree' component={ChapterThree}></Route>
         </Switch>
       </div>
     </Router>
