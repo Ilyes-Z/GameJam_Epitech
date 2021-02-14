@@ -40,7 +40,11 @@ function HomeDialogue(props) {
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Welcome</DialogTitle>
-        <p>ouverture</p>
+        <p> Bienvenue dans l'espace-temps ! </p>
+        <p> Essayez de vous ménager ! A cause d'un choc entre la méteorite de Thor et la Terre, vous avez été secouez ! </p>
+        <p> Vous aurez du mal à vous souvenir de tout mais ça viendra... Je l'espère...</p>
+        <p> Quoi qu'il en soit pour revenir à votre bonne période, il va falloir traverser Passé, Présent et Futur !</p>
+        <p> On y va ? Allez hop !</p>
         <Button onClick={handleClose}>close</Button>
       </Dialog>
     </div>
