@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { Button, makeStyles, Card, CardContent } from '@material-ui/core';
+import Video from './resume-de-lannee-2020.mp4';
 import './ChapterTwo.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -65,7 +66,7 @@ const ChapterTwo = () => {
         </div>
       </div>
       <div>
-        <p>slt</p>
+      <video controls autoPlay src={Video} type="video/mp4"/>
       </div>
     </div>
   );
