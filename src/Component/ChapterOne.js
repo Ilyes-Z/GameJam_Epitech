@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
-import { Button, makeStyles } from '@material-ui/core';
+import { Button, makeStyles, CardHeader } from '@material-ui/core';
 import ArticlesDialog from './Dialog/Articles';
 import ArticlesBasic from './Dialog/Basic';
 import GroupArticle from './Dialog/GroupArticle';
@@ -12,6 +12,15 @@ import './ChapterOne.css';
 const useStyles = makeStyles((theme) => ({
   root:{
     minWidth: 270
+  },
+  rat: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: '10%',
+    maxWidth: 270
+  },
+  content: {
+    margin: 'auto'
   },
   title: {
     flexGrow: 1,
@@ -53,11 +62,14 @@ const ChapterOne = () => {
         <Button type='submit' className={classes.background}  variant="contained"
           color="primary">FIND</Button>
       </form>
+      <p>there we are!<br/>This is some events that happnd in the past<br/>Just find the key</p>
       <div className='wrapper'>
         <div className='item1'>
           <Card className={classes.root}>
             <CardContent>
-              <h3>Turing</h3>
+            <CardHeader
+                title='Turing'
+              ></CardHeader>
               <ArticlesDialog />
             </CardContent>
           </Card>
@@ -65,16 +77,20 @@ const ChapterOne = () => {
         <div className='item2'>
           <Card className={classes.root}>
             <CardContent>
-              <h3>Your First Step</h3>
+            <CardHeader
+                title='Your First Steps'
+              ></CardHeader>
               <ArticlesBasic />
             </CardContent>
           </Card>
         </div>
       </div>
-        <div>
-          <Card className={classes.root}>
-            <CardContent>
-              <h3>Your first group</h3>
+        <div className='item3'>
+          <Card className={classes.rat}>
+            <CardContent className={classes.content}>
+              <CardHeader
+                title='Your First Group'
+              ></CardHeader>
               <GroupArticle />
             </CardContent>
           </Card>

@@ -40,7 +40,7 @@ function GroupArticle(props) {
           Read
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Your first team Work</DialogTitle>
+        <DialogTitle id="form-dialog-title" title='Your first team Work'></DialogTitle>
         <video controls autoPlay src={Video} type="video/mp4" />
       </Dialog>
     </div>
