@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
-import { Button, makeStyles } from '@material-ui/core';
+import { Button, makeStyles, Card, CardContent } from '@material-ui/core';
 import './ChapterTwo.css';
 
 const useStyles = makeStyles((theme) => ({

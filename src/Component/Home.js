@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, Box, Button, IconButton, makeStyles, Toolbar, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import HomeDialogue from './HomeDialog/HomeDialogue';
 import './Home.css';
 
 const useStyles = makeStyles(theme => ({
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <div className='title'>
       <h1>HOME</h1>
+      <HomeDialogue />
       <div>
         <Link to='/chapterOne' className={classes.link}><h3>Chapter One: The Past</h3></Link>
         <p>zbeuuuul</p>
