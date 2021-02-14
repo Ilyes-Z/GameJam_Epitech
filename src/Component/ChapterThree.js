@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const talk = ['Welcome to the future'];
+const talk = ['Hello I am glad you find me! Dr. Steve Mataboli said one day Look around you. Everything changes. everything on this earth is in a continuous state of evolving, refining, improving, adapting, enhancing, and changing. You were not put on this earth to remain stagnant. So it is time for you to go ahead and improve your skills and make technologies upgrade'];
 
 const ChapterThree = () => {
   const classes = useStyles();
@@ -46,7 +46,7 @@ const ChapterThree = () => {
   const handleFutureSubmit = (e) => {
     e.preventDefault();
     console.log(future);
-    if (future == "Future" && present == "Present") {
+    if (future == "Evolve" && present == "Present") {
       console.log('ok done');
       //window.location.replace('/#/chapterThree');
     }
@@ -71,7 +71,7 @@ const ChapterThree = () => {
           <form onSubmit={handleFutureSubmit}>
             <TextField
               value={future}
-              placeholder='You know what you want'
+              placeholder='What you want'
               onChange={event => {setFuture(event.target.value)}}
             />
             <Button className={classes.background}  variant="contained"
