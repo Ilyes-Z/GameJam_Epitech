@@ -16,11 +16,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const talk = ['Welcome to the future'];
+
 const ChapterThree = () => {
   const classes = useStyles();
   const [isValid] = useState(false);
   const [present, setPresent] = useState('');
   const [future, setFuture] = useState('');
+
+  const readOut = () => {
+    const speech = new SpeechSynthesisUtterance();
+
+    const dev = talk[Math.floor(Math.random() * talk.length)];
+    speech.text = dev;
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+    window.speechSynthesis.speak(speech);
+   };
 
   const handlePresentSubmit = (e) => {
     e.preventDefault();
@@ -68,6 +81,7 @@ const ChapterThree = () => {
       </div>
       <div>
         <p>slt Future </p>
+        <Button onClick={readOut}>Talk To Me</Button>
         <p>“On n'est toujours que trop ce que les hommes veulent que l'on soit." Rousseau</p>
       </div>
     </div>
