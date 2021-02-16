@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     fontWeight: 'bold',
     textDecoration: 'none',
-    color: '#ffffff',
   },
   background: {
     backgroundColor: '#000000'
