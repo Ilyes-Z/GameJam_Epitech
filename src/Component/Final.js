@@ -3,7 +3,7 @@ import './Final.css';
 
 function Final() {
   return (
-    <div className='back'>
+    <div className='body'>
       <br/>
       <br/>
       <br/>
@@ -12,7 +12,7 @@ function Final() {
       <br/>
       <br/>
       <br/>
-      <br/>
+      <br/> 
       <br/>
       <br/>
       <br/>

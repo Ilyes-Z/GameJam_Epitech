@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-body {
-  background-color: #b5b5b5;
-}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
